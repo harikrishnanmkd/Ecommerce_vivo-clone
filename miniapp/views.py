@@ -164,8 +164,8 @@ def checkout(request):
                 payment_method_types=['card'],
                 line_items=line_items,
                 mode='payment',
-                success_url='http://127.0.0.1:8000/success/',
-                cancel_url='http://127.0.0.1:8000/checkout/',
+                success_url='https://ecommerce-vivo-clone.onrender.com/success/',
+                cancel_url='https://ecommerce-vivo-clone.onrender.com/checkout/',
             )
 
             return redirect(session.url)
