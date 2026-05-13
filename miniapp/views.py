@@ -83,7 +83,7 @@ def cart(request):
 
             return redirect('cart')
 
-        # ✅ ONLY SELECTED ITEMS
+        # ONLY SELECTED ITEMS
         if 'place_order' in request.POST:
             selected_ids = request.POST.getlist('selected_items')
 
@@ -128,7 +128,7 @@ def checkout(request):
 
         method = request.POST.get('payment_method')
 
-        # ✅ COD
+        #  COD
         if method == "cod":
             for item in cart_items:
                 Order.objects.create(
@@ -144,7 +144,7 @@ def checkout(request):
 
             return redirect('success')
 
-        # ✅ STRIPE
+        # STRIPE
         elif method == "stripe":
             line_items = []
 
